@@ -35,7 +35,6 @@ valores_validos = ('A','T','C','G')
 for indice, contenido in enumerate(lista):
     # En la posiciones pares tendremos a los titulos.
     # Por lo cual se trabaja con las posiciones impares.
-    print(len(lista[1]))
     if indice % 2 != 0:
         pos_inicio = 0
         pos_final = 0
@@ -49,7 +48,7 @@ for indice, contenido in enumerate(lista):
                     pos_inicio = indice
                     inicio = False
                 elif indice == len(contenido) - 1:
-                    pos_final = indice - 1
+                    pos_final = indice
                     print("String{} : {}. start: {} end: {}\n".format (cont, secuencia_valida, pos_inicio + 1, pos_final + 1))
                 secuencia_valida += caracter
             elif secuencia_valida != "":

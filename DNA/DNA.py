@@ -1,4 +1,4 @@
-# Lectura y returno de los valores del archivo.
+# Lectura y retorno de los valores del archivo.
 # EL archivo a abrir debe estar junto con este código.
 def lectura_filtrado_archivo(nombre_archivo, permiso):
     archivo = open(nombre_archivo, permiso) 
@@ -20,14 +20,17 @@ valores_validos = ('A','T','C','G')
 pos_inicio = 0
 pos_final = 0
 secuencia_valida = ""
+# variable para detectar que ya se ha encontrado un caracter válido.
 inicio = True
 cont = 1
+print ("Resultados: ")
 for indice, caracter in enumerate(valores):
     if caracter in valores_validos:
         secuencia_valida += caracter
         if inicio:
             pos_inicio = indice
             inicio = False
+        # En caso de llegar al final y haya caracteres validos
         elif indice == len(valores) - 1:
             pos_final = indice
             print("String{} : {}. start: {} end: {}\n".format (cont, secuencia_valida, pos_inicio + 1, pos_final + 1))
@@ -37,11 +40,4 @@ for indice, caracter in enumerate(valores):
         print("String{} : {}. start: {} end: {}\n".format (cont, secuencia_valida, pos_inicio + 1, pos_final + 1))
         cont += 1
         secuencia_valida = ""
-
-
-
-
-
-
-
         
